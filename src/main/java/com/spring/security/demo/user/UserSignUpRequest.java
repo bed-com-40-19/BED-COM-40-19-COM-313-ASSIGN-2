@@ -12,6 +12,7 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserSignUpRequest {
+    
     @NotEmpty(message = "User name is required")
     String userName;
     @NotEmpty(message = "firstName  is required")

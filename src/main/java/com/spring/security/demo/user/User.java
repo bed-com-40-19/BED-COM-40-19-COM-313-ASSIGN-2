@@ -22,6 +22,7 @@ import java.util.List;
 @SuperBuilder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User extends BaseEntity {
+
     @Column(name = "first_name", nullable = false, length = 90)
     String firstName;
     @Column(name = "last_name", nullable = false, length = 90)
@@ -39,4 +40,5 @@ public class User extends BaseEntity {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     List<Role> roles = new ArrayList<>();
+
 }

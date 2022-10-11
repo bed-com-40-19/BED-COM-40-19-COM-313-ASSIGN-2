@@ -22,6 +22,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RequestMapping("/api/v1/users")
 @Validated
 public class UserController {
+
     private final IUserService userService;
 
     public UserController(IUserService userService) {
@@ -59,5 +60,6 @@ public class UserController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse> disableAccount(@PathVariable("userName") String userName){
         return userService.disableAccount(userName);
+
     }
 }

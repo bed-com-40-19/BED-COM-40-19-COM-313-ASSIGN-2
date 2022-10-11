@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 
 public interface IUserService{
+
     ResponseEntity<ApiResponse> saveUser(UserSignUpRequest userSignUpRequest);
     ResponseEntity<UserModel> getUser(Authentication authentication);
     ResponseEntity<PagedModel<?>> getAllUsers(int page, int size, PagedResourcesAssembler<User> userPagedResourcesAssembler);
