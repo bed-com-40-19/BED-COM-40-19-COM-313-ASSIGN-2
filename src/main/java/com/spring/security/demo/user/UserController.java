@@ -31,6 +31,7 @@ public class UserController {
     @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<ApiResponse> signUp(@Valid @RequestBody UserSignUpRequest userSignUpRequest){
         return userService.saveUser(userSignUpRequest);
+
     }
 
 

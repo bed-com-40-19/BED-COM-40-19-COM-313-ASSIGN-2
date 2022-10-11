@@ -16,4 +16,5 @@ public interface IUserService{
     ResponseEntity<ApiResponse> updateUserRole(String userUuid, String newRole, Authentication currentUser);
 
     ResponseEntity<ApiResponse> disableAccount(String userName);
+    
 }
